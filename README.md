@@ -67,7 +67,7 @@ In our case, for example, when a ```Tick()``` or ```Tock()``` command is called,
 - PLEXIL installed and configured (See Plexil documentation for this)
 
 #### Running the application:
-1. Go to sdevikar-app/src/plans and generate the .plx file from the .ple plan
+1. Go to src/plans and generate the .plx file from the .ple plan
 
 ```
 plexilc TickTockPlan.ple
@@ -76,7 +76,9 @@ plexilc TickTockPlan.ple
 2. Compile the application:
 
 ```
-cmake -DCMAKE_BUILD_TYPE=Release ../src
+mkdir ticktock-plexil-ticktock/build
+cd build
+cmake ../src
 make
 ```
 
