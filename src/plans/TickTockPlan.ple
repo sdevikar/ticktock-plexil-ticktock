@@ -1,0 +1,30 @@
+//Plexil requires all commands/lookups used within the plan to be declared first
+Command Init ();
+Command Tick ();
+Command Tock ();
+Command pprint(...);
+Integer Lookup TickCounter; //keeps a count of tick executions
+Integer Lookup TockCounter; //keeps a count of tock executions
+
+//This is the one and the only action in this plan 
+Run:
+{
+  EndCondition (Lookup(TickCounter) >= 25) && (Lookup(TockCounter) >= 25);
+
+  pprint ("Initializing statemachine");
+  Init();
+
+  Execute:
+  {
+    while (Lookup(TickCounter) < 25 && Lookup(TockCounter) < 25)
+    {
+      Tick();
+      Tock();
+    }
+  }
+
+  Print:
+  {
+    pprint ("Job Finished...");
+  }
+}
