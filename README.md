@@ -12,7 +12,7 @@ More importantly, the example apps only cover the "pure PLEXIL" side of things. 
 will have to use the PLEXIL executive that comes with standard PLEXIL distribution.
 The SampleDrive app in the examples folder has some interfacing with C++ code, but the "simulator" part of the code is still pure PLEXIL.
 (More on this below)
-In our case, for SSC, we have built the entire binary from scratch, by statically linking to PLEXIL standard library,
+A standalone binary can be built by statically or dynamically linking to PLEXIL standard libraries,
 and that is what I wanted to demonstrate.
 
 ## Concept
@@ -35,7 +35,7 @@ There are two requirements for adapter to interface PLEXIL and the "external" sy
 - Implement InterfaceAdapter interface. This is a standard interface that comes with PLEXIL distribution and PLEXIL will call the APIs that developer will override in TickTockAdapter class.
 
 ## Writing your own application:
-As the PLEXIL documentation mentions, we need to write our own application, if we prefer an executable which has all interfaces pre-loaded and or executive needs to run in a particular threading environment. Our SSC is its own PLEXIL application. Meaning, we have our own main loop.
+As the PLEXIL documentation mentions, we need to write our own application, if we prefer an executable which has all interfaces pre-loaded and or executive needs to run in a particular threading environment.
 To demonstrate how this works, I have written main.cpp. This main.cpp has boilerplate code that is present in the standard UniversalExec.cpp that comes with PLEXIL distribution.
 The only thing that is changed in here, is the name of the adapter.
 The code to handle command line arguments etc. is in fact and not changed from UniversalExec.cpp or SystemStateController.cpp.
