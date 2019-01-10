@@ -1,4 +1,4 @@
-# Understanding a PLEXIL based application using a barebones app
+# Understanding a [PLEXIL](http://plexil.sourceforge.net/wiki/index.php/Main_Page) based application using a barebones app
 
 ## About the app functionality
 TickTock is a barebones PLEXIL based app that attempts to throw some light on the bells and whistles of a PLEXIL based app.
