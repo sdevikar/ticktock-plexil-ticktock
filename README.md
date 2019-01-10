@@ -1,7 +1,7 @@
 # Understanding a [PLEXIL](http://plexil.sourceforge.net/wiki/index.php/Main_Page) based application using a barebones app
 
 ## About the app functionality
-TickTock is a barebones PLEXIL based app that attempts to throw some light on the bells and whistles of a PLEXIL based app.
+TickTock is a barebones PLEXIL (version 4.5.0RC2) based app that attempts to throw some light on the bells and whistles of a PLEXIL based app.
 The TickTock app has no functionality whatsoever. It is an app that prints out strings "Tick" and "Tock" 25 times and exits.
 
 
