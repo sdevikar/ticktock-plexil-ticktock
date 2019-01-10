@@ -38,7 +38,7 @@ There are two requirements for adapter to interface PLEXIL and the "external" sy
 As the PLEXIL documentation mentions, we need to write our own application, if we prefer an executable which has all interfaces pre-loaded and or executive needs to run in a particular threading environment.
 To demonstrate how this works, I have written main.cpp. This main.cpp has boilerplate code that is present in the standard UniversalExec.cpp that comes with PLEXIL distribution.
 The only thing that is changed in here, is the name of the adapter.
-The code to handle command line arguments etc. is in fact and not changed from UniversalExec.cpp or SystemStateController.cpp.
+The code to handle command line arguments etc. is in fact and not changed from UniversalExec.cpp
 
 In the CMakeLists.txt, the executable TickTockController is created from main.cpp and TickTockAdapter.cpp.
 
