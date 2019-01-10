@@ -59,7 +59,8 @@ endif()
 
 
 # Find the required packages here. Threads package is required
-# As mentioned earlier, we could also do find_package(Plexil REQUIRED) here
+# As mentioned earlier, we could (and honestly, SHOULD) instead do
+# find_package(Plexil REQUIRED) here, but for simplicity, we're not doing it for now
 find_package (Threads  REQUIRED)
 
 
