@@ -67,9 +67,10 @@ In our case, for example, when a ```Tick()``` or ```Tock()``` command is called,
 - PLEXIL installed and configured (See Plexil documentation for this)
 
 #### Running the application:
-1. Go to src/plans and generate the .plx file from the .ple plan
+1. Compile the PLEXIL plan as below:
 
 ```
+cd src/plans
 plexilc TickTockPlan.ple
 ```
 
@@ -82,11 +83,13 @@ cmake ../src
 make
 ```
 
-3. Copy the generated TickTockController and TickTockPlan.plx to convenient locations and Run the PLEXIL plan. e.g.
+3. Run the PLEXIL plan. e.g.
 
 ```
-./TickTockController -p plans/TickTockPlan.plx
+./TickTockController -p ../src/plans/TickTockPlan.plx -c ../src/interface-config.xml -d ../src/Debug.cfg
 ```
+
+Note: You can comment out stuff from Debug.cfg (by prefixing #) as needed, if you do not want to see verbose output
 
 
 ## Afterthoughts:
